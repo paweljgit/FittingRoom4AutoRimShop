@@ -1,5 +1,10 @@
 # przymiarki-felg
 
+## Live app link
+```
+https://fittingroom4autorimshop.netlify.app/
+```
+
 ## Project setup
 ```
 yarn install
