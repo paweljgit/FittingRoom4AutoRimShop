@@ -1,0 +1,129 @@
+[
+
+    {
+        "id": 1,
+        "rimName": "alkatec rx15 silver 21292",
+        "photo": "http://s08.pl/nauka/assets/rims/sqn-alkatec-rx15-silver-21292-f-f-l272-sk2.png",
+        "category": "Sportowe",
+        "price": 544,
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus pharetra, placerat ligula nec, mattis eros. In dictum massa vitae elit ultrices, ut dignissim eros accumsan.",
+        "active": false
+    },
+    {
+        "id": 2,
+        "rimName": "alutec grip 4804 54161",
+        "photo": "http://s08.pl/nauka/assets/rims/sqn-alutec-grip-4804-54161-f-f-l272-sk2.png",
+        "category": "Sportowe",
+        "price": 688,
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus pharetra, placerat ligula nec, mattis eros. In dictum massa vitae elit ultrices, ut dignissim eros accumsan.",
+        "active": false
+    },
+    {
+        "id": 3,
+        "rimName": "anzio split polar 15632",
+        "photo": "http://s08.pl/nauka/assets/rims/sqn-anzio-split-polar-15632-203879-f-f-l272-sk2.png",
+        "category": "Sportowe",
+        "price": 427,
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus pharetra, placerat ligula nec, mattis eros. In dictum massa vitae elit ultrices, ut dignissim eros accumsan.",
+        "active": false
+    },
+    {
+        "id": 4,
+        "rimName": "att gemini 57 f",
+        "photo": "http://s08.pl/nauka/assets/rims/sqn-att-gemini-57-f-f-l272-sk2.png",
+        "category": "Sportowe",
+        "price": 597,
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus pharetra, placerat ligula nec, mattis eros. In dictum massa vitae elit ultrices, ut dignissim eros accumsan.",
+        "active": false
+    },
+    {
+        "id": 5,
+        "rimName": "borbet by titan polished",
+        "photo": "http://s08.pl/nauka/assets/rims/sqn-borbet-by-titan-polished-17344-f-f-l272-sk2.png",
+        "category": "Sportowe",
+        "price": 655,
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus pharetra, placerat ligula nec, mattis eros. In dictum massa vitae elit ultrices, ut dignissim eros accumsan.",
+        "active": false
+    },
+    {
+        "id": 6,
+        "rimName": "brock b28 sghp 5575",
+        "photo": "http://s08.pl/nauka/assets/rims/sqn-brock-b28-sghp-5575-f-f-l272-sk2.png",
+        "category": "Sportowe",
+        "price": 578,
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus pharetra, placerat ligula nec, mattis eros. In dictum massa vitae elit ultrices, ut dignissim eros accumsan.",
+        "active": false
+    },
+    {
+        "id": 7,
+        "rimName": "brock b35 smvp 12341",
+        "photo": "http://s08.pl/nauka/assets/rims/sqn-brock-b35-smvp-12341-f-f-l272-sk2.png",
+        "category": "Sportowe",
+        "price": 500,
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus pharetra, placerat ligula nec, mattis eros. In dictum massa vitae elit ultrices, ut dignissim eros accumsan.",
+        "active": false
+    },
+    {
+        "id": 8,
+        "rimName": "dotz dakar 86 1700",
+        "photo": "http://s08.pl/nauka/assets/rims/sqn-dotz-dakar-86-1700-f-f-l272-sk2.png",
+        "category": "Sportowe",
+        "price": 522,
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus pharetra, placerat ligula nec, mattis eros. In dictum massa vitae elit ultrices, ut dignissim eros accumsan.",
+        "active": false
+    },
+    {
+        "id": 9,
+        "rimName": "momo rf 4 hybrid",
+        "photo": "http://s08.pl/nauka/assets/rims/sqn-momo-rf-04-hybrid-silver-20088-f-f-l272-sk2.png",
+        "category": "Sportowe",
+        "price": 344,
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus pharetra, placerat ligula nec, mattis eros. In dictum massa vitae elit ultrices, ut dignissim eros accumsan.",
+        "active": false
+    },
+    {
+        "id": 10,
+        "rimName": "msw 48 black polished",
+        "photo": "http://s08.pl/nauka/assets/rims/sqn-msw-48-black-polished-15843-f-f-l272-sk2.png",
+        "category": "Sportowe",
+        "price": 242,
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus pharetra, placerat ligula nec, mattis eros. In dictum massa vitae elit ultrices, ut dignissim eros accumsan.",
+        "active": false
+    },
+    {
+        "id": 11,
+        "rimName": "oz leggera hlt grigio",
+        "photo": "http://s08.pl/nauka/assets/rims/sqn-oz-leggera-hlt-grigio-corsa-11796-f-f-l272-sk2.png",
+        "category": "Sportowe",
+        "price": 219,
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus pharetra, placerat ligula nec, mattis eros. In dictum massa vitae elit ultrices, ut dignissim eros accumsan.",
+        "active": false
+    },
+    {
+        "id": 12,
+        "rimName": "oz superturismo dakar graphite",
+        "photo": "http://s08.pl/nauka/assets/rims/sqn-oz-superturismo-dakar-graphite-5673-f-f-l272-sk2.png",
+        "category": "Sportowe",
+        "price": 673,
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus pharetra, placerat ligula nec, mattis eros. In dictum massa vitae elit ultrices, ut dignissim eros accumsan.",
+        "active": false
+    },
+    {
+        "id": 13,
+        "rimName": "oz superturismo lm graphite",
+        "photo": "http://s08.pl/nauka/assets/rims/sqn-oz-superturismo-lm-graphite-5555-f-f-l272-sk2.png",
+        "category": "Sportowe",
+        "price": 257,
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus pharetra, placerat ligula nec, mattis eros. In dictum massa vitae elit ultrices, ut dignissim eros accumsan.",
+        "active": false
+    },
+    {
+        "id": 14,
+        "rimName": "oz ultraleggera gold 157",
+        "photo": "http://s08.pl/nauka/assets/rims/sqn-oz-ultraleggera-gold-157-f-f-l272-sk2.png",
+        "category": "Sportowe",
+        "price": 609,
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus pharetra, placerat ligula nec, mattis eros. In dictum massa vitae elit ultrices, ut dignissim eros accumsan.",
+        "active": false
+    }
+]
