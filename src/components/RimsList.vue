@@ -35,7 +35,7 @@ export default {
   },
 
   props: {
-  appState: String
+    appState: String
   },
 
   methods: {
@@ -44,10 +44,10 @@ export default {
       this.$emit('rimClicked', e);
 
       if(this.appState == 'selectRim' || this.appState == 'rimSelected') {
-      this.rimsdb.forEach(element => {
-        element.active = false
-      });
-      e.active = true
+        this.rimsdb.forEach(element => {
+          element.active = false
+        });
+        e.active = true
       }
 
     }

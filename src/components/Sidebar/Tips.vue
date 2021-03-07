@@ -7,7 +7,7 @@
       <div v-if="this.appState == 'uploadPhoto'">
           <h1 class="tips__title">Wgraj zdjęcie</h1>
           <p>Wgraj zdjęcie swojego samochodu ustawionego prostopadle do obiektywu.</p>
-          <img alt="tip" src="../assets/jak-zdjecie.png">
+          <img alt="tip" src="../../assets/jak-zdjecie.png">
       </div>
 
       <div v-if="this.appState == 'drawRimMockups'">
@@ -17,12 +17,12 @@
               <li>Kliknij jednokrotnie na początku lini przecięcia koła.</li>
               <li>Kliknij jednokrotnie na końcu lini przecięcia koła.</li>
           </ol>
-          <img alt="instrukcja" src="../assets/instrukcja.png">
+          <img alt="instrukcja" src="../../assets/instrukcja.png">
       </div>
 
       <div v-if="this.appState == 'selectRim'" class="tips__select-rim">
           <h1 class="tips__title">Wybierz felgę z listy</h1>
-          <img alt="Arrow" src="../assets/arrow.png">
+          <img alt="Arrow" src="../../assets/arrow.png">
       </div>
 
   </div>

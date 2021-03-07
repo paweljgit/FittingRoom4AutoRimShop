@@ -1,19 +1,16 @@
 <!-- 
 
 OPIS KOMPONENTOW: 
-
-1. Komponent Desktop to główny komponent pozwalający na "przymiarki" felg do samochodu. 
-2. Komponent RimsList prezentuje listę dostępnych felg.
-3. Komponent Sidebar prezentuje podpowiedzi dla uzytkownika oraz dane dotyczące wybranej felgi. 
+  1. Komponent Desktop to główny komponent pozwalający na "przymiarki" felg do samochodu. 
+  2. Komponent RimsList prezentuje listę dostępnych felg.
+  3. Komponent Sidebar prezentuje podpowiedzi dla uzytkownika oraz dane dotyczące wybranej felgi. 
 
 OPIS DANYCH:
-
-appState - Zawiera obecny stan aplikacji
-rimData - Zawiera dane dotyczące wybranej przez uzytkownika felgi
+  appState - Zawiera obecny stan aplikacji
+  rimData - Zawiera dane dotyczące wybranej przez uzytkownika felgi
 
 DODATKOWE INFO:
-
-Świadomie nie stosowałem vue shorthands dla utrwalenia syntax.
+  Świadomie nie stosowałem vue shorthands dla utrwalenia syntax.
 
 -->
 
@@ -25,7 +22,7 @@ DODATKOWE INFO:
 
       <Desktop 
         v-on:changeState="changeState" 
-        v-bind:rimData="this.rimData" 
+        v-bind:rimPic="this.rimData.photo" 
         v-bind:appState="this.appState"
       />
 
@@ -73,8 +70,8 @@ export default {
     
     rimClicked(e) {
       if (this.appState == 'selectRim' || this.appState == 'rimSelected') {
-      this.rimData = e,
-      this.appState = 'rimSelected'
+        this.rimData = e,
+        this.appState = 'rimSelected'
       } else {
         alert('Najpierw wgraj zdjęcie samochodu i zaznacz miejsca gdzie są felgi.')
       }
@@ -131,6 +128,14 @@ export default {
   font-size: 14px;
   font-weight: 600;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.button:hover {
+  background-color: rgb(243, 243, 243);
+}
+
+:active {
+  outline: 0;
 }
 
 </style>

@@ -1,7 +1,7 @@
 <!-- 
 Komponent wyswietla: 
-- Podpowiedzi dla uzytkownika (Komponent Tips).
-- Dane na temat wybranej felgi.
+- podpowiedzi dla uzytkownika (Komponent Tips)
+- dane na temat wybranej felgi
  -->
 
 <template>
@@ -24,7 +24,7 @@ Komponent wyswietla:
 </template>
 
 <script>
-import Tips from './Tips.vue'
+import Tips from './Sidebar/Tips.vue'
 
 export default {
   name: 'Sidebar',
