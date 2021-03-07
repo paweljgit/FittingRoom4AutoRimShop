@@ -5,6 +5,13 @@
 https://fittingroom4autorimshop.netlify.app/
 ```
 
+## Video presentation of the app
+```
+https://youtu.be/CEhgIS5mgM8
+```
+
+
+
 ## Project setup
 ```
 yarn install
