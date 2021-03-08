@@ -36,7 +36,7 @@ Mozliwość zrestartowania stanu aplikacji i ponownego wgrania zdjęcia.
 
 <script>
 
-import RimMockup from './RimMockup.vue';
+import RimMockup from './DrawingBoardRimMockup.vue';
 
 export default {
   name: 'DrawingBoard',

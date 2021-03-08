@@ -20,22 +20,22 @@ DODATKOWE INFO:
 
     <div class="main-panel">
 
-      <Desktop 
-        v-on:changeState="changeState" 
+      <MainDesktop  
         v-bind:rimPic="this.rimData.photo" 
         v-bind:appState="this.appState"
+        v-on:changeState="changeState"
       />
 
       <RimsList 
-        v-on:rimClicked="rimClicked" 
         v-bind:appState="this.appState"
+        v-on:rimClicked="rimClicked" 
       />
 
     </div>
 
     <div class="sidebar">
 
-      <Sidebar 
+      <RightSidebar 
         v-bind:rimData="this.rimData" 
         v-bind:appState="this.appState" 
       />
@@ -48,14 +48,14 @@ DODATKOWE INFO:
 
 <script>
 
-import Desktop from './components/Desktop.vue'
+import MainDesktop from './components/MainDesktop.vue'
 import RimsList from './components/RimsList.vue'
-import Sidebar from './components/Sidebar.vue'
+import RightSidebar from './components/RightSidebar.vue'
 
 export default {
   name: 'App',
   components: {
-    Desktop, RimsList, Sidebar
+    MainDesktop, RimsList, RightSidebar
   },
   
   data() {

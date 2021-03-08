@@ -6,10 +6,10 @@
 
     <div 
       v-for="rim in rimsdb" 
-      class="rim" 
       v-bind:key="rim.id" 
-      v-on:click="rimClicked(rim)" 
       v-bind:class="{active : rim.active === true}" 
+      class="rim" 
+      v-on:click="rimClicked(rim)" 
     >
 
       <img v-bind:src="rim.photo" class="rim__photo" loading="lazy" /> 

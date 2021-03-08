@@ -7,7 +7,7 @@ Komponent wyswietla:
 <template>
   <div class="sidebar">
 
-    <Tips 
+    <RightSidebarTips 
     v-if="this.appState != 'rimSelected'"
     v-bind:appState="this.appState" />
 
@@ -24,12 +24,12 @@ Komponent wyswietla:
 </template>
 
 <script>
-import Tips from './Sidebar/Tips.vue'
+import RightSidebarTips from './RightSidebarTips.vue'
 
 export default {
   name: 'Sidebar',
   components: {
-    Tips
+    RightSidebarTips
   },
 
   props: {

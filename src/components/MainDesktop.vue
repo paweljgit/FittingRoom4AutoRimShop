@@ -40,7 +40,7 @@ Komponent na podstawie biezącego stanu aplikacji udostępnia:
 
 <script>
 
-import DrawingBoard from './Desktop/DrawingBoard.vue';
+import DrawingBoard from './MainDesktop/DrawingBoard.vue';
 
 export default {
 
