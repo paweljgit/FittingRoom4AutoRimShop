@@ -6,32 +6,35 @@ Komponent na podstawie biezącego stanu aplikacji udostępnia:
 
 -->
 
+<!-- 
+1. pomieszana składnia `@` i `v-on` - brak konsekwencji
+-->
 
 <template>
-
   <div class="desktop">
-
-    <div v-if="this.appState == 'uploadPhoto'" class="uploader">
-
+    <div v-if="showUploadRequest" class="uploader">
       <label for="image-input" class="button">
         <img src="../assets/upload.png">
         <span>Kliknij, żeby wgrać zdjęcie</span>
       </label>
-      <input id="image-input" type="file" accept="image" v-on:change="photoUploading" >
-      
+      <input
+        id="image-input"
+        type="file"
+        accept="image"
+        @change="photoUploading"
+      >
     </div>
 
-    <div v-if="this.appState != 'uploadPhoto'" 
+    <div v-else 
       class="bg-picture" 
-      v-bind:style="PreviewImageAsBg"
+      v-bind:style="previewImageAsBg"
     >
-      <DrawingBoard 
-        v-bind:appState="this.appState"
-        v-bind:rimPic="this.rimPic"
-        @changeState="changeState('selectRim')"
-        @resetState="changeState('uploadPhoto')"
+      <drawing-board 
+        v-bind:appState="appState"
+        v-bind:rimPic="rimPic"
+        @changeState="$emit('changeState', states.SELECT_RIM)"
+        @resetState="$emit('changeState', states.UPLOAD_PHOTO)"
        />
-
     </div>
 
   </div>
@@ -39,12 +42,16 @@ Komponent na podstawie biezącego stanu aplikacji udostępnia:
 </template>
 
 <script>
-
+import STATES from '@/app/states';
 import DrawingBoard from './MainDesktop/DrawingBoard.vue';
 
 export default {
+  name: 'MainDesktop',
 
-  name: 'Desktop',
+  model: {
+    prop: 'appState',
+    event: 'changeState',
+  },
 
   components: {
     DrawingBoard
@@ -52,6 +59,7 @@ export default {
 
   data() {
     return {
+      states: STATES,
       previewImage: ''
     }
   },
@@ -63,32 +71,27 @@ export default {
   },
 
   methods: {
-
     photoUploading(e) {
-      this.$emit('changeState', 'drawRimMockups');
+      this.$emit('changeState', this.states.DRAW_RIM_MOCKUPS);
       const image = e.target.files[0];
       this.previewImage = URL.createObjectURL(image);
     },
-
-    changeState(e) {
-      this.$emit('changeState', e)
-    }
-
   },
 
   computed: {
-
-    PreviewImageAsBg () {
+    previewImageAsBg () {
       return `
       background-image: url("${this.previewImage}");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       `
-    }
+    },
 
-  }
-
+    showUploadRequest() {
+      return this.appState === STATES.UPLOAD_PHOTO;
+    },
+  },
 }
 
 </script>

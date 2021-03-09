@@ -14,20 +14,23 @@ DODATKOWE INFO:
 
 -->
 
+<!--
+1. this nie jest potrzben w template
+-->
+
 <template>
 
   <div id="app">
 
     <div class="main-panel">
 
-      <MainDesktop  
-        v-bind:rimPic="this.rimData.photo" 
-        v-bind:appState="this.appState"
-        v-on:changeState="changeState"
+      <main-desktop  
+        v-bind:rimPic="rimData.photo" 
+        v-model="appState"
       />
 
-      <RimsList 
-        v-bind:appState="this.appState"
+      <rims-list 
+        v-bind:appState="appState"
         v-on:rimClicked="rimClicked" 
       />
 
@@ -35,9 +38,9 @@ DODATKOWE INFO:
 
     <div class="sidebar">
 
-      <RightSidebar 
-        v-bind:rimData="this.rimData" 
-        v-bind:appState="this.appState" 
+      <right-sidebar 
+        v-bind:rimData="rimData" 
+        v-bind:appState="appState" 
       />
 
     </div>
@@ -47,7 +50,7 @@ DODATKOWE INFO:
 </template>
 
 <script>
-
+import STATES from '@/app/states';
 import MainDesktop from './components/MainDesktop.vue'
 import RimsList from './components/RimsList.vue'
 import RightSidebar from './components/RightSidebar.vue'
@@ -63,24 +66,17 @@ export default {
       rimData: {},
       appState: 'uploadPhoto'
     }
-
   },
 
   methods: {
-    
     rimClicked(e) {
-      if (this.appState == 'selectRim' || this.appState == 'rimSelected') {
+      if (this.appState === STATES.SELECT_RIM || this.appState == STATES.RIM_SELECTED) {
         this.rimData = e,
-        this.appState = 'rimSelected'
+        this.appState = STATES.RIM_SELECTED;
       } else {
         alert('Najpierw wgraj zdjęcie samochodu i zaznacz miejsca gdzie są felgi.')
       }
     },
-
-    changeState(e) {
-      this.appState = e
-    }
-
   }
 }
 </script>

@@ -6,12 +6,7 @@ Komponent wyswietla:
 
 <template>
   <div class="sidebar">
-
-    <RightSidebarTips 
-    v-if="this.appState != 'rimSelected'"
-    v-bind:appState="this.appState" />
-
-    <div v-if="this.appState == 'rimSelected'" class="rim-info">
+    <div v-if="isRimSelected" class="rim-info">
       <h2 class="rim-info__title">{{ rimData.rimName }}</h2>
       <span class="rim-info__category">{{ rimData.category }}</span>
       <span class="rim-info__price">{{ rimData.price }} zł/szt </span>
@@ -20,11 +15,17 @@ Komponent wyswietla:
       <button v-on:click="order" class="rim-info__button button">Zamów</button>
     </div>
 
+    <right-sidebar-tips 
+      v-else
+      v-bind:appState="appState"
+    />
+
   </div>
 </template>
 
 <script>
 import RightSidebarTips from './RightSidebarTips.vue'
+import STATES from '@/app/states';
 
 export default {
   name: 'Sidebar',
@@ -35,6 +36,12 @@ export default {
   props: {
     rimData: Object,
     appState: String,
+  },
+
+  computed: {
+    isRimSelected() {
+      return this.appState === STATES.RIM_SELECTED;
+    },
   },
 
   methods: {

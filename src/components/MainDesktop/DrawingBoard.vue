@@ -13,7 +13,7 @@ Mozliwość zrestartowania stanu aplikacji i ponownego wgrania zdjęcia.
   <div class="drawing-board" v-on:click="createRims(2)" v-on:mousemove="calcWidth">
 
     <div v-for="rim in rimPositions" v-bind:key="rim.id">
-      <RimMockup 
+      <drawing-board-rim-mockup
         v-bind:rimPosition="rim" 
         v-bind:tempWidth="tempWidth"
         v-bind:appState="appState"
@@ -36,13 +36,13 @@ Mozliwość zrestartowania stanu aplikacji i ponownego wgrania zdjęcia.
 
 <script>
 
-import RimMockup from './DrawingBoardRimMockup.vue';
+import DrawingBoardRimMockup from './DrawingBoardRimMockup.vue';
 
 export default {
   name: 'DrawingBoard',
 
   components: {
-    RimMockup
+    DrawingBoardRimMockup
   },
 
   data() {

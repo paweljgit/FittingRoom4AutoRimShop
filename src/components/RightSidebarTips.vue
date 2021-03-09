@@ -1,40 +1,36 @@
 <!-- Podpowiedzi wyświetlane na podstawie stanu aplikacji -->
 
 <template>
-
   <div class="tips">
-
-      <div v-if="this.appState == 'uploadPhoto'">
-          <h1 class="tips__title">Wgraj zdjęcie</h1>
-          <p>Wgraj zdjęcie swojego samochodu ustawionego prostopadle do obiektywu.</p>
-          <img alt="tip" src="../assets/jak-zdjecie.png">
-      </div>
-
-      <div v-if="this.appState == 'drawRimMockups'">
-          <h1 class="tips__title">Zaznacz na zdjęciu koła</h1>
-          <p>Zaznacz średnicę kół.</p>
-          <ol>
-              <li>Kliknij jednokrotnie na początku lini przecięcia koła.</li>
-              <li>Kliknij jednokrotnie na końcu lini przecięcia koła.</li>
-          </ol>
-          <img alt="instrukcja" src="../assets/instrukcja.png">
-      </div>
-
-      <div v-if="this.appState == 'selectRim'" class="tips__select-rim">
-          <h1 class="tips__title">Wybierz felgę z listy</h1>
-          <img alt="Arrow" src="../assets/arrow.png">
-      </div>
-
+    <component :is="selectedComponent" class="tips__title" />
   </div>
-
 </template>
 
 <script>
+import STATES from '@/app/states';
+import DrawRimMockups from './tips/DrawRimMockups.vue';
+import SelectRims from './tips/SelectRims.vue';
+import UploadPhoto from './tips/UploadPhoto.vue';
+
 export default {
   name: 'Tips',
 
   props: {
     appState: String
+  },
+
+  computed: {
+    selectedComponent() {
+      if (this.appState === STATES.UPLOAD_PHOTO) {
+        return UploadPhoto;
+      }
+
+      if (this.appState === STATES.DRAW_RIM_MOCKUPS) {
+        return DrawRimMockups;
+      }
+
+      return SelectRims;
+    }
   }
 
 }
@@ -48,7 +44,7 @@ export default {
   height: 100%;
 }
 
-.tips__title {
+.tips__title ::v-deep h1 {
   font-size: 16px;
   margin: 0px;
   padding: 0px;
@@ -62,11 +58,6 @@ export default {
 
 .tips ol {
   padding-left: 20px;
-}
-
-.tips__select-rim {
-  align-self: flex-end;
-  margin-bottom: 30px;
 }
 
 </style>
