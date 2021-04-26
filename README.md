@@ -14,7 +14,7 @@ If you want to try the application but you don't have a photo of the car - don't
 
 ## Live site url 
 
-https://fittingroom4autorimshop.netlify.app - I invite you check, go ahead and click :)
+https://fittingroom4autorimshop.netlify.app - I invite you to check, go ahead and click :)
 
 ## What do we have here?
 
