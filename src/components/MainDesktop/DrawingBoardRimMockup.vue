@@ -34,7 +34,7 @@ Dynamicznie odbiera dane o wybranej feldze z app za pomocą props.
 
 <script>
 export default {
-  name: 'RimMockup',
+  name: 'DrawingBoardRimMockup',
 
   props: {
     rimPic: String,

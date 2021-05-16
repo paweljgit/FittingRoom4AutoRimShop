@@ -3,35 +3,30 @@
 <template>
 
   <div class="rims-list">
-
-    <div 
-      v-for="rim in rimsdb" 
-      v-bind:key="rim.id" 
-      v-bind:class="{active : rim.active === true}" 
-      class="rim" 
-      v-on:click="rimClicked(rim)" 
-    >
-
-      <img v-bind:src="rim.photo" class="rim__photo" loading="lazy" /> 
-      <span class="rim__name">{{ rim.rimName }}</span>
-
-    </div>
-
+    <rim-image
+      v-for="{ rimName, id, active, photo } in rimsdb"
+      :key="id"
+      :name="rimName"
+      :active="active"
+      :photo="photo"
+      @click="rimClicked(id)"
+    />
   </div>
 
 </template>
 
 <script>
 import rimsData from '../assets/rims-data.json';
+import RimImage from './RimImage.vue';
 
 export default {
   name: 'RimsList',
+  components: { RimImage },
 
   data() {
     return {
       rimsdb: rimsData
     }
-
   },
 
   props: {
@@ -39,21 +34,22 @@ export default {
   },
 
   methods: {
-    
-    rimClicked(e) {
-      this.$emit('rimClicked', e);
+    rimClicked(id) {
+      const selectedRim = this.rimsdb[id];
 
-      if(this.appState == 'selectRim' || this.appState == 'rimSelected') {
-        this.rimsdb.forEach(element => {
-          element.active = false
-        });
-        e.active = true
-      }
+      this.$emit('rimClicked', selectedRim);
 
-    }
+      this.activateRim(id);
+    },
 
+    activateRim(activationId) {
+      this.rimsdb = this.rimsdb.map(({ id, ...rest }) => ({
+        ...rest,
+        id,
+        active: id === activationId,
+      }));
+    },
   }
-
 }
 </script>
 
@@ -89,23 +85,5 @@ export default {
   flex-direction: column;
 }
 
-.active {
-  border: 1px solid lightgray;
-}
-
-.rim__photo {
-  height: 60px;
-  width: 60px;
-  display: flex;
-  margin: 0 auto;
-  padding: 5px;
-}
-
-.rim__name {
-  font-size: 10px;
-  line-height: 15px;
-  height: 15px;
-  overflow: hidden;
-}
 
 </style>
